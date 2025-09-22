@@ -1,0 +1,78 @@
+/* Custom TailwindCSS styles for the application */
+.upload-zone {
+    @apply border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition-colors cursor-pointer;
+}
+
+.upload-content {
+    @apply flex flex-col items-center justify-center;
+}
+
+.upload-preview {
+    @apply mt-4 rounded-lg overflow-hidden;
+}
+
+.creative-controls {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.control-group {
+    @apply space-y-2;
+}
+
+.preview-section {
+    @apply mt-8 p-6 bg-white rounded-lg shadow-lg;
+}
+
+.preview-image img {
+    max-height: 400px; /* Limit image height */
+}
+
+.preview-details {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4 mb-4;
+}
+
+.detail-item {
+    @apply space-y-1;
+}
+
+.history-section {
+    @apply mt-8 p-6 bg-white rounded-lg shadow-lg;
+}
+
+.history-list {
+    @apply space-y-4;
+}
+
+.history-item {
+    @apply flex items-center space-x-4 p-4 border rounded-lg hover:bg-gray-50 cursor-pointer transition-colors;
+}
+
+.history-item img {
+    @apply w-16 h-16 object-cover rounded-md;
+}
+
+/* Modal styles */
+.fixed.inset-0 {
+    z-index: 50;
+}
+.bg-black.bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.w-full.max-w-3xl {
+    max-width: 48rem; /* 768px */
+}
+.modal-header {
+    @apply pb-4 border-b;
+}
+.modal-body {
+    @apply pt-4;
+}
+.modal-footer {
+    @apply pt-6;
+}
+.modal-content {
+    @apply relative bg-white rounded-lg shadow-xl p-6;
+}
+.close-btn {
+    @apply absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center;
+}

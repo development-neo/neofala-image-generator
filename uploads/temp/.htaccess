@@ -1,0 +1,21 @@
+# Prevent execution of PHP files in upload directory
+<Files "*.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Prevent access to sensitive file types
+<FilesMatch "\.(php|phtml|php3|php4|php5|pl|py|cgi|sh)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Only allow image files
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Deny access to everything else
+Order Deny,Allow
+Deny from all
